@@ -81,7 +81,7 @@ Puppet::Reports.register_report(:hipchat) do
     if HIPCHAT_PUPPETBOARD
       msg << ": #{HIPCHAT_PUPPETBOARD}/report/#{self.host}/#{self.configuration_version}"
     elsif HIPCHAT_DASHBOARD
-      msg << ": #{HIPCHAT_DASHBOARD}/nodes/#{self.host}/view"
+      msg << ": #{HIPCHAT_DASHBOARD}/#/node_groups/inventory/node/#{self.host}/reports"
     end
 
     if HIPCHAT_STATUSES.include?('testing')
